@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MULTIPOL - Earn 2X your POL in just 7 Days</title>
+
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #ff2b2b;
+      --green: #2fb678;
+      --red-light: #ff7b7b;
+      --green-light: #90ffc6;
+
+      --bg-dark: #050505;
+      --panel-dark: #0f0f12;
+      --panel-mid: #141720;
+
+      --text-light: #e8fff4;
+      --text-dim: #9ddbbf;
+
+      --border: #37ff9c;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+
+    body{
+      font-family:'Space Grotesk', sans-serif;
+      color:var(--text-light);
+      min-height:100vh;
+      background:#000;
+      background:radial-gradient(circle at top,#111 0%, #000 80%);
+      overflow-x:hidden;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 25px;
+      background:#090909;
+      border-bottom:1px solid #143;
+    }
+
+    .brand{
+      font-family:'Orbitron', sans-serif;
+      font-size:28px;
+      font-weight:700;
+      background:linear-gradient(90deg,#ff3333,#37ff9c);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .btn{
+      background:linear-gradient(90deg,#ff3333,#37ff9c);
+      color:#000;
+      border:none;
+      border-radius:12px;
+      padding:10px 16px;
+      font-weight:800;
+      cursor:pointer;
+      transition:0.3s;
+      letter-spacing:0.5px;
+    }
+
+    .btn:hover{ opacity:0.9; transform:translateY(-2px); }
+
+    main{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:40px 20px;
+    }
+
+    .center-card{
+      width:100%;
+      max-width:980px;
+      background:#0b0f14;
+      border-radius:18px;
+      padding:34px;
+      border:2px solid #37ff9c55;
+      box-shadow:0 0 40px #37ff9c22;
+      text-align:center;
+    }
+
+    .neon-box{
+      width:300px;
+      margin:auto;
+      padding:18px;
+      border-radius:14px;
+      background:#101820;
+      border:2px solid #37ff9c;
+      box-shadow:0 0 20px #37ff9c44;
+    }
+
+    .neon-box img{
+      width:110px;
+      height:110px;
+      border-radius:14px;
+      display:block;
+      margin:6px auto 8px;
+    }
+
+    .badge{
+      position:absolute;
+      top:12px;
+      right:12px;
+      padding:6px 10px;
+      border-radius:10px;
+      font-weight:800;
+      background:linear-gradient(90deg,#ff3333,#37ff9c);
+      color:#000;
+    }
+
+    #walletShort{ margin-top:8px; font-weight:700; color:#b3ffe0; }
+    #balance{ color:#60ffb2; font-weight:800; }
+    
+.user-stats1{
+  margin:18px auto;                  /* centers the box */
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #37ff9c55;
+  background:#101820;
+  width:100%;
+  max-width:340px;                   /* optional: keeps nice size */
+  text-align:center;                 /* centers inside text */
+}
+
+    .user-stats{
+      margin-top:18px;
+      padding:14px;
+      border-radius:12px;
+      border:1px solid #37ff9c55;
+      background:#101820;
+    }
+
+    .user-stats h3{
+      font-family:"Orbitron";
+      font-size:22px;
+      color:#90ffc6;
+    }
+
+    .stat-line{ color:#d8ffee; }
+
+    label{ font-weight:700; color:#c4ffe6; }
+
+    input[type="number"], input[readonly]{
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:2px solid #37ff9c55;
+      background:#0b1418;
+      color:#eafff5;
+    }
+
+    .withdraw-area{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      margin-top:18px;
+    }
+
+    .withdraw-box{
+      padding:12px;
+      border-radius:12px;
+      min-width:160px;
+      border:2px solid #37ff9c;
+      background:#0d151b;
+      box-shadow:0 0 10px #37ff9c33;
+    }
+
+    #depositHistory{
+      margin-top:24px;
+      max-height:260px;
+      overflow:hidden;
+      border:2px solid #37ff9c55;
+      border-radius:10px;
+      background:#0b1418;
+      padding:12px;
+    }
+
+    .deposit-item{
+      padding:10px;
+      margin-bottom:8px;
+      border-bottom:1px solid #37ff9c22;
+      background:#101820;
+      border-radius:8px;
+      color:#eafff5;
+    }
+
+    footer{
+      text-align:center;
+      padding:22px;
+      color:#9ddbbf;
+    }
+
+    a{ color:#90ffc6; }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <button id="connectBtn" class="btn">Connect Wallet</button>
+      <div class="brand">MultiPOL</div>
+      <div style="width:120px;"></div>
+    </header>
+
+    <main>
+      <div class="user-stats1">
+
+        <div class="neon-box">
+          <div class="badge"></div>
+          <img src="logo.png">
+          <p>28.6% Daily</p>
+          <p>7 Days</p>
+          <p>200% Total Return</p>
+        </div>
+
+        <h3>CONTRACT BALANCE :</h3>
+        <div><span id="contractBalance">POL</span></div>
+
+        <div id="walletShort">Not connected</div>
+        <div>Wallet Balance: <span id="balance">-- POL</span></div>
+
+        <div class="user-stats">
+          <h3>Your Statistics</h3>
+          <div class="stat-line">Total Stake: <span id="totalDeposits">0 POL</span></div>
+          <div class="stat-line">Total Withdrawn: <span id="totalWithdrawn">0 POL</span></div>
+        </div>
+
+        <div class="stake-area">
+          <label>Input POL Amount</label>
+          <div style="display:flex; gap:10px; margin-top:12px;">
+            <input id="stakeAmount" type="number" min="1" placeholder="Amount (POL)">
+            <button id="stakeBtn" class="btn">Stake</button>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <input id="refLink" readonly placeholder="Your referral link here">
+          <button id="copyRef" class="btn" style="margin-top:10px;">Copy Referral Link</button>
+        </div>
+
+        <div class="withdraw-area">
+          <div class="withdraw-box">
+            <div>Withdrawable</div>
+            <div id="withdrawable">0 POL</div>
+          </div>
+          <button id="withdrawBtn" class="btn">Withdraw</button>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><h3>1. What is MultiPOL?</h3><p>MultiPOL is a decentralized staking dApp with 28.6% Daily for 7 Days.</p></div>
+          <div class="faq-item"><h3>2. How can I start staking?</h3><p>Connect your wallet, input your amount (min 1 POL), and click “Stake”.</p></div>
+          <div class="faq-item"><h3>3. When can I withdraw?</h3><p>You can withdraw anytime. Rewards update live and can be claimed instantly.</p></div>
+          <div class="faq-item"><h3>4. Is this safe?</h3><p>All transactions are on Polygon — handled by immutable smart contracts.</p></div>
+          <div class="faq-item"><h3>5. How does referral work?</h3><p>Share your link — earn 10% commissions from stake.</p></div>
+        </div>
+      </div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <a href="https://t.me/MultiPOL2026" target="_blank">Telegram</a> |
+  <a href="https://polygonscan.com/address/0x9187984118034Cc2200A00035116a8F48FeAB5A9#writeContract" target="_blank">Contract</a>
+  <p>© 2026 MultiPOL</p>
+</footer>
+
+  </div>
+
+  <script src="web3.min.js"></script>
+  <script src="abi.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

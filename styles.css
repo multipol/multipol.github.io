@@ -1,0 +1,85 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at center, #000010, #000);
+  color: rgb(98, 0, 255);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-family: inherit;
+  color: #fff;
+  background: #000;
+  border-radius: 10px;
+}
+
+
+/* ✅ Make the Stake button wider than the input */
+#stakeAmount {
+  width: 40%;           /* smaller input */
+  padding: 10px;
+  text-align: center;
+}
+
+#stakeBtn {
+  width: 60%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;        /* ✅ centers text horizontally */
+  display: flex;             /* ✅ centers text vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+.neon {
+  text-shadow: 0 0 5px rgb(153, 0, 255), 0 0 10px rgb(111, 0, 255);
+}
+
+.border-glow {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #9900ff, #7700ff, #7700ff) border-box;
+  animation: glowBorder 2s linear infinite;
+}
+
+@keyframes glowBorder {
+  0% { box-shadow: 0 0 5px #5900ff, 0 0 15px #6200ff; }
+  50% { box-shadow: 0 0 20px #7700ff, 0 0 40px #a200ff; }
+  100% { box-shadow: 0 0 5px #ae00ff, 0 0 15px #3700ff; }
+}
+
+.site-footer{
+  width:100%;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  padding:22px 10px;
+}
+.site-footer a{
+  text-decoration:none;
+}
+.center-card{
+  width:100%;
+  display:flex;
+  justify-content:center;   /* centers the box */
+}
+
+.neon-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;       /* centers content inside */
+  justify-content:center;
+  text-align:center;
+  margin:20px auto;         /* centers & adds spacing */
+  max-width:320px;          /* keeps nice size on mobile */
+}
+
